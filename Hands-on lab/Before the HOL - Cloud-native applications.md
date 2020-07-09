@@ -34,15 +34,15 @@ You should follow all of the steps provided in this section _before_ taking part
 
 1. Open cloud shell by selecting the cloud shell icon in the menu bar.
 
-   ![The cloud shell icon is highlighted on the menu bar.](media/b4-image35.png)
+ ![The cloud shell icon is highlighted on the menu bar.](media/b4-image35.png)
 
 2. The cloud shell will open in the browser window Choose “Bash” if prompted.
 
-   ![This is a screenshot of the cloud shell opened in a browser window. Bash was selected.](media/bash.png)
+ ![This is a screenshot of the cloud shell opened in a browser window. Bash was selected.](media/bash.png)
 
 3. Click on show advanced settings.
 
-   ![](media/showadvance.png)
+ ![](media/showadvance.png)
 
 4. In advanced settings , select Create new for storage account and file share and fill the details
 
