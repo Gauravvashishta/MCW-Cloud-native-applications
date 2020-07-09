@@ -42,7 +42,7 @@ You should follow all of the steps provided in this section _before_ taking part
 
 3. Click on show advanced settings.
 
- ![](media/showadvance.png)
+   ![](media/showadvance.png)
 
 4. In advanced settings , select Create new for storage account and file share and fill the details
 
