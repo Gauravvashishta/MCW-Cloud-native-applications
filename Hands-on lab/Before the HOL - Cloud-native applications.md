@@ -40,9 +40,9 @@ You should follow all of the steps provided in this section _before_ taking part
 
    ![This is a screenshot of the cloud shell opened in a browser window. Bash was selected.](media/bash.png)
 
-3. showadvance
+3. Click on show advanced settings.
 
-  [In this screenshot of a Bash window, az account show has been typed and run at the command prompt. Some subscription information is visible in the window, and some information is obscured.](media/showadvance.png)
+ ![](media/showadvance.png)
 
 4. In advanced settings , select Create new for storage account and file share and fill the details
 
