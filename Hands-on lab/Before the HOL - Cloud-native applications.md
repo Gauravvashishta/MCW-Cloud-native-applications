@@ -20,51 +20,9 @@ The names of manufacturers, products, or URLs are provided for informational pur
 
 © 2019 Microsoft Corporation. All rights reserved.
 
-**Contents**
-
-<!-- TOC -->
-
-- [Cloud-native applications before the hands-on lab setup guide](#cloud-native-applications-before-the-hands-on-lab-setup-guide)
-  - [Requirements](#requirements)
-  - [Before the hands-on lab](#before-the-hands-on-lab)
-    - [Task 1: Setup Azure Cloud Shell](#task-1-setup-azure-cloud-shell)
-    - [Task 2: Download Starter Files](#task-2-download-starter-files)
-    - [Task 3: Resource Group](#task-3-resource-group)
-    - [Task 4: Create an SSH key](#task-4-create-an-ssh-key)
-    - [Task 5: Create a Service Principal](#task-5-create-a-service-principal)
-    - [Task 6: Deploy ARM Template](#task-6-deploy-arm-template)
-    - [Task 7: Setup Azure DevOps project](#task-7-setup-azure-devops-project)
-    - [Task 8: Connect securely to the build agent](#task-8-connect-securely-to-the-build-agent)
-    - [Task 9: Complete the build agent setup](#task-9-complete-the-build-agent-setup)
-    - [Task 10: Clone Repositories to the Build Agent](#task-10-clone-repositories-to-the-build-agent)
-
-<!-- /TOC -->
 
 # Cloud-native applications before the hands-on lab setup guide
 
-## Requirements
-
-1. Microsoft Azure subscription must be pay-as-you-go or MSDN.
-
-   - Trial subscriptions will _not_ work.
-
-   - To complete this lab setup (including [Task 5: Create a Service Principal](#Task-5-Create-a-Service-Principal)) ensure your account includes the following:
-
-     - Has the [Owner](https://docs.microsoft.com/en-us/azure/role-based-access-control/built-in-roles#owner) built-in role for the subscription you will use.
-
-     - Is a [Member](https://docs.microsoft.com/en-us/azure/active-directory/fundamentals/users-default-permissions#member-and-guest-users) user in the Azure AD tenant you will use. (Guest users will not have the necessary permissions).
-
-     > **Note** If you do not meet these requirements you may have to ask another member user with subscription owner rights to login to the portal and execute the create service principal step ahead of time.
-
-   - You must have enough cores available in your subscription to create the build agent and Azure Kubernetes Service cluster in [Task 6: Deploy ARM Template](#Task-6-Deploy-ARM-Template). You'll need eight cores if following the exact instructions in the lab, more if you choose additional agents or larger VM sizes. If you execute the steps required before the lab, you will be able to see if you need to request more cores in your sub.
-
-2. An account in Azure DevOps.
-
-3. Local machine or a virtual machine configured with:
-
-   - A browser, preferably Chrome for consistency with the lab implementation tests.
-
-4. You will be asked to install other tools throughout the exercises.
 
 ## Before the hands-on lab
 
@@ -78,31 +36,18 @@ You should follow all of the steps provided in this section _before_ taking part
 
    ![The cloud shell icon is highlighted on the menu bar.](media/b4-image35.png)
 
-2. The cloud shell will open in the browser window. Choose "Bash" if prompted or use the left-hand dropdown on the shell menu bar to choose "Bash" (as shown).
+2. The cloud shell will open in the browser window Choose “Bash” if prompted.
 
-   ![This is a screenshot of the cloud shell opened in a browser window. Bash was selected.](media/b4-image36.png)
+   ![This is a screenshot of the cloud shell opened in a browser window. Bash was selected.](media/bash.png)
 
-3. You should make sure to set your default subscription correctly. To view your current subscription type:
+3. showadvance
 
-   ```bash
-   az account show
-   ```
+  [In this screenshot of a Bash window, az account show has been typed and run at the command prompt. Some subscription information is visible in the window, and some information is obscured.](media/showadvance.png)
 
-   ![In this screenshot of a Bash window, az account show has been typed and run at the command prompt. Some subscription information is visible in the window, and some information is obscured.](media/b4-image37.png)
+4. In advanced settings , select Create new for storage account and file share and fill the details
 
-4. To list all of your subscriptions, type:
+![In this screenshot of a Bash window, az account list has been typed and run at the command prompt. Some subscription information is visible in the window, and some information is obscured.](media/createstorage.png)
 
-   ```bash
-   az account list
-   ```
-
-   ![In this screenshot of a Bash window, az account list has been typed and run at the command prompt. Some subscription information is visible in the window, and some information is obscured.](media/b4-image38.png)
-
-5. To set your default subscription to something other than the current selection, type the following, replacing {id} with the desired subscription id value:
-
-   ```bash
-   az account set --subscription {id}
-   ```
 
 ### Task 2: Download Starter Files
 
